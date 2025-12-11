@@ -11,6 +11,7 @@
 // Includes
 #include <iostream>
 #include <string>
+#include "classes/Kud/Kud.h"
 
 int main(void) {
 	// Greet player, allowing them to choose between three classes (mage, gun, or sword)
@@ -49,6 +50,9 @@ int main(void) {
 			return -1;
 	}
 	std::cout << std::endl;
+
+	// Spawn Kud
+	Kud Kud;
 
 	return 0;
 }
