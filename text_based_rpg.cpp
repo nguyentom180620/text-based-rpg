@@ -10,8 +10,30 @@
 
 // Includes
 #include <iostream>
+#include <vector>
 #include <string>
-#include "classes/Kud/Kud.h"
+#include "characters/Kud/Kud.h"
+
+// Game is mapped currently by a single Zone
+// This Zone (the current game area, but might expand) will hold three Areas (that is, Zone holds areas)
+// These three areas are the main Village, the forest, and the lava pit
+// Areas will hold whether they have the player (to manage different avaliable sections of game later)
+// Areas will also hold character lists (for village, villigers, and forest, monsters)
+// After that, each one will have to have unique traits
+
+class Character {
+	int hp;
+	std::string name;
+public:
+	// Make class abstract
+	Character();
+	virtual ~Character() = 0;
+};
+
+class Area {
+	bool has_player;
+	
+};
 
 int main(void) {
 	// Greet player, allowing them to choose between three classes (mage, gun, or sword)
